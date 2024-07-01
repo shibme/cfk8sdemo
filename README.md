@@ -18,7 +18,8 @@ kubectl create secret -n cfk8sdemo generic cf --from-literal=token=<cloudflare_t
 - Create a test config map in your namespace
 ```bash
 kubectl create configmap -n cfk8sdemo test --from-literal=hello=world
-- Deploy the app
+```
+- Deploy the app and cloudflared in your namespace
 ```bash
 kubectl apply -n cfk8sdemo -f k8s/deploy.yaml
 ```
